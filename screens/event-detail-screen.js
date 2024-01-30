@@ -7,11 +7,11 @@ const EventDetailScreen = props => {
     const route = useRoute()
     const navigation = useNavigation()
 
-    const { EventId, title, description } = route.params
+    const { EventId, name, description } = route.params
 
     useLayoutEffect(() => {
         navigation.setOptions({
-            headerTitle: "new title",
+            headerTitle: name,
             headerLeft: () => (
                 <HeaderBackButton
                     tintColor="white"
@@ -23,8 +23,8 @@ const EventDetailScreen = props => {
     
     return ( 
         <View style={styles.screen}>
-            <Text style={{fontSize:30}}>This is the Event Detail Screen for object :{EventId}</Text>
-            <Text style={{fontSize:24}}>{title}</Text>
+            <Text style={{fontSize:20, marginBottom:20, color:'darkred'}}>This is the Event Detail Screen for object :{EventId}</Text>
+            <Text style={{fontSize:24}}>{name}</Text>
             <Text style={{fontSize:20}}>{description}</Text>
         </View>
      );

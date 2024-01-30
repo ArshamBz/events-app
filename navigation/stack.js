@@ -6,6 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import ProfilesScreen from '../screens/profiles/profiles-screen';
 import ProfileDetailScreen from '../screens/profiles/profiles-detail-screen';
 import { HomeTabs } from './tabs';
+import NewEventScreen from '../screens/new-event-screen';
 
 const Stack = createStackNavigator();
 
@@ -17,6 +18,7 @@ export const HomeStack = () => {
     >
       <Stack.Screen name="Home" component={HomeTabs} />
       <Stack.Screen name="Event" component={EventDetailScreen} />
+      <Stack.Screen name="New Event" component={NewEventScreen} />
     </Stack.Navigator>
   );
 }
